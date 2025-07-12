@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍅 Pomodoro Timer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>🍅 Pomodoro Timer</h1>
+
+    <!-- Progress Ring -->
+    <svg class="progress-ring" width="200" height="200">
+      <circle class="progress-ring__circle" stroke="#5a4fcf" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+    </svg>
+    <div id="timer">25:00</div>
+
+    <p id="session-type">Work Session 🧠</p>
+    <p id="session-count">Session 1 of 4</p>
+
+    <div class="controls">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <div class="settings">
+      <label>Work Time (min): 
+        <input type="number" id="workTime" value="25">
+      </label>
+      <label>Break Time (min): 
+        <input type="number" id="breakTime" value="5">
+      </label>
+    </div>
+
+    <div class="theme-toggle">
+      <label>🌙 <input type="checkbox" id="darkModeToggle"> ☀️</label>
+    </div>
+  </div>
+
+  <audio id="alarm-sound" src=" https://www.soundjay.com/buttons/sounds/beep-07.mp3 "></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
