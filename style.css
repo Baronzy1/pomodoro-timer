@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f9d4ff, #bfe9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+.app-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .app-container {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #5a4fcf;
+}
+
+#timer {
+  font-size: 64px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  margin-bottom: 20px;
+}
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.3s linear;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48; /* circumference = 2 * π * 90 */
+  stroke-dashoffset: 565.48;
+}
+
+#session-type, #session-count {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #888;
+}
+
+.controls button {
+  background-color: #5a4fcf;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #453ccf;
+}
+
+.settings input {
+  width: 50px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+  text-align: center;
+}
+
+.settings label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 14px;
+}
+
+.theme-toggle {
+  margin-top: 20px;
+  font-size: 18px;
+}
